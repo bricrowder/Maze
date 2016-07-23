@@ -1,7 +1,7 @@
 function love.load()  
 	--initilize the game variables
 	game = {}
-  game["scale"] = 32          -- how big each cell is drawn
+  game["scale"] = 32          -- how big each cell is drawn in pixels
 	game["height"] = 16         -- how high the floorplan is 
 	game["width"] = 24          -- how wide the floorplan is
   game["offset_w"] = 16       -- X pixel offset the floorplan is drawn
@@ -81,11 +81,6 @@ function floorplan_generate(mh, mw)
 			c["Sd"] = 0			--is the south wall a door
 			c["Ed"] = 0			--is the east wall a door
 			c["Nd"] = 0			--is the north wall a door
-			c["quad"] = 0		--the spritesheet quad will be assigned to it
-			c["TLc"] = 0		--if this cell needs a Top/Left corner graphic
-			c["TRc"] = 0		--if this cell needs a Top/Right corner graphic
-			c["BLc"] = 0		--if this cell needs a Bottom/Left corner graphic
-			c["BRc"] = 0		--if this cell needs a Bottom/Right corner graphic
 			
 						
 			floorplan[i][j] = c
